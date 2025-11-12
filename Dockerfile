@@ -4,11 +4,11 @@ WORKDIR /app
 
 # Copy requirements.txt only if it exists
 # This prevents "file not found" errors during COPY
-COPY requirements.txt* ./
+COPY requirments.txt* ./
 
 # Install dependencies safely
 RUN pip install --upgrade pip && \
-    if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    if [ -f requirments.txt ]; then pip install -r requirments.txt; fi
 
 # Copy rest of your code
 COPY . .
