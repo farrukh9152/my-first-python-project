@@ -6,9 +6,9 @@ app = Flask(__name__)
 def add_numbers():
     return """
     <form method='GET'>
-        <input name='num1' placeholder='Enter first number here'/>
-        <input name='num2' placeholder='Enter second number'/>
-        <button type='submit'>Add</button>
+        <input name='num1' placeholder='Enter 1st number here'/>
+        <input name='num2' placeholder='Enter 2nd number'/>
+        <button type='submit'>Sum</button>
     </form>
     """ + (
         f"Sum: {int(request.args.get('num1', 0)) + int(request.args.get('num2', 0))}"
